@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Family Care Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🏠 Family Care Dashboard</h1>
+
+<div class="top-bar">
+    <h3 id="greet"></h3>
+    <p id="date"></p>
+</div>
+
+<!-- 🌟 HERO SECTION -->
+<div class="hero">
+    <h2>💚 Family Health Overview</h2>
+    <p>Manage medicines, reminders and care for your loved ones</p>
+</div>
+
+<!-- 📌 QUICK ACTIONS -->
+<div class="actions">
+    <div class="action-card">➕ Add Reminder</div>
+    <div class="action-card">📅 Today Schedule</div>
+    <div class="action-card">🚨 Emergency Info</div>
+</div>
+
+<!-- 📊 SUMMARY -->
+<div class="summary">
+    <div class="summary-card">📋 Total: <span id="total">0</span></div>
+    <div class="summary-card">👨 Dad: <span id="dadCount">0</span></div>
+    <div class="summary-card">👩 Mom: <span id="momCount">0</span></div>
+</div>
+
+<!-- FORM -->
+<div class="form-box">
+    <select id="person">
+        <option>Dad</option>
+        <option>Mom</option>
+    </select>
+
+    <input id="task" placeholder="💊 Medicine / Task">
+    <input id="time" type="time">
+
+    <button onclick="addReminder()">➕ Add Reminder</button>
+</div>
+
+<!-- GRID CONTAINER -->
+<div class="grid">
+
+    <div class="card dad-card">
+        <h2>👨 Dad's Reminders</h2>
+        <div id="dad-list"></div>
+    </div>
+
+    <div class="card mom-card">
+        <h2>👩 Mom's Reminders</h2>
+        <div id="mom-list"></div>
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
